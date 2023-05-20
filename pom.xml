@@ -8,15 +8,24 @@
         <version>3.1.0</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
+
     <groupId>ase</groupId>
     <artifactId>tm</artifactId>
     <version>0.0.1-SNAPSHOT</version>
+    <packaging>pom</packaging>
     <name>tm</name>
     <description>tm</description>
+    <modules>
+        <module>tm-0-plugins</module>
+        <module>tm-1-adapters</module>
+        <module>tm-2-application</module>
+        <module>tm-3-domain</module>
+        <module>tm-4-abstractioncode</module>
+    </modules>
+
     <properties>
         <java.version>17</java.version>
     </properties>
-
 
     <dependencies>
         <dependency>
@@ -36,6 +45,11 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-clean-plugin</artifactId>
+                <version>3.1.0</version>
             </plugin>
         </plugins>
     </build>

@@ -10,7 +10,7 @@
         <version>0.0.1-SNAPSHOT</version>
     </parent>
     <groupId>ase</groupId>
-    <artifactId>tm-0-plugins</artifactId>
+    <artifactId>Application</artifactId>
     <version>0.0.1-SNAPSHOT</version>
 
     <properties>

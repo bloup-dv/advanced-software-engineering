@@ -25,9 +25,10 @@ public class Session {
     public Session() {
     }
 
-    public Session(LocalDateTime startTime) {
+    public Session(LocalDateTime startTime, Activity activity) {
         this.startTime = startTime;
         this.endTime = null;
+        this.activity = activity;
     }
 
     public Session(Long id, LocalDateTime startTime, @Nullable LocalDateTime endTime, Activity activity) {

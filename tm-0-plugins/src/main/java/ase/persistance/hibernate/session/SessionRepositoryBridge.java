@@ -1,6 +1,7 @@
 package ase.persistance.hibernate.session;
 
 
+import ase.activity.Activity;
 import ase.session.Session;
 import ase.session.SessionRepository;
 import ase.persistance.hibernate.session.SpringDataSessionRepository;
@@ -33,7 +34,14 @@ public class SessionRepositoryBridge implements SessionRepository {
     public List<Session> findAll() {
         return springDataSessionRepository.findAll();
     }
-
+    @Override
+    public boolean isActive(){return springDataSessionRepository.findByEndTimeIsNull();}
+    @Override
+    public Session findActive(){return springDataSessionRepository.getById(springDataSessionRepository.findFirstByEndTimeIsNull());}
+    @Override
+    public List<Session> findAllByActivity(Activity activity){ return springDataSessionRepository.findAllByActivity(activity);}
+    @Override
+    public boolean existsById(Long id){return springDataSessionRepository.existsById(id);}
     @Override
     public void delete(Session session) {
         springDataSessionRepository.delete(session);

@@ -23,9 +23,15 @@
     <dependencies>
         <dependency>
             <groupId>ase</groupId>
-            <artifactId>tm-1-adapters</artifactId>
+            <artifactId>tm-2-application</artifactId>
             <version>0.0.1-SNAPSHOT</version>
             <scope> compile </scope>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.22</version>
+            <scope>provided</scope>
         </dependency>
     </dependencies>
     

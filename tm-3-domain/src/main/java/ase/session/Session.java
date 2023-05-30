@@ -1,11 +1,9 @@
 package ase.session;
 
 import ase.activity.Activity;
-import ase.types.Category;
 import jakarta.persistence.*;
 import jakarta.annotation.Nullable;
 
-import java.util.Date;
 import java.time.LocalDateTime;
 
 @Entity

@@ -1,8 +1,6 @@
 package ase.category;
 
-import ase.activity.Activity;
 import ase.timeframe.TimeFrameDTOToTimeFrameMapper;
-import ase.types.Category;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 

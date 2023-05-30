@@ -1,7 +1,7 @@
 package ase.activity;
 
 import ase.session.Session;
-import ase.types.Category;
+import ase.category.Category;
 import ase.types.Estimation;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;

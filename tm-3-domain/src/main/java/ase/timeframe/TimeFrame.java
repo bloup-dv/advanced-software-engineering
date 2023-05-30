@@ -1,9 +1,8 @@
-package ase.types;
-import java.util.Date;
+package ase.timeframe;
 import java.time.LocalTime;
 import java.util.List;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import ase.category.Category;
 import jakarta.persistence.*;
 
 

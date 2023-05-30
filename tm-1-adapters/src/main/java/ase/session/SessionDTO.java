@@ -1,8 +1,6 @@
 package ase.session;
 
 import ase.activity.ActivityDTO;
-import ase.types.Category;
-import ase.types.Estimation;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;

@@ -1,6 +1,7 @@
-package ase.types;
+package ase.category;
 
 import ase.activity.Activity;
+import ase.timeframe.TimeFrame;
 import jakarta.persistence.*;
 
 import java.util.List;

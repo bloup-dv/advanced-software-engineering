@@ -4,9 +4,6 @@ import ase.activity.CreateActivitiesService;
 import ase.activity.ActivityDTO;
 import ase.activity.ActivityDTOToActivityMapper;
 import ase.activity.ActivityToActivityDTOMapper;
-import ase.category.CategoryDTOToCategoryMapper;
-import ase.category.CategoryToCategoryDTOMapper;
-import ase.types.Category;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 @RestController

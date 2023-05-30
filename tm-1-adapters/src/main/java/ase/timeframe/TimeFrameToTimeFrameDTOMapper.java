@@ -1,7 +1,5 @@
 package ase.timeframe;
 
-import ase.activity.Activity;
-import ase.types.TimeFrame;
 import org.springframework.stereotype.Component;
 
 import java.util.function.Function;

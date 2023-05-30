@@ -23,7 +23,7 @@
     <dependencies>
         <dependency>
             <groupId>ase</groupId>
-            <artifactId>tm-2-application</artifactId>
+            <artifactId>tm-3-domain</artifactId>
             <version>0.0.1-SNAPSHOT</version>
             <scope> compile </scope>
         </dependency>

@@ -1,6 +1,9 @@
 package ase.activity;
 
+import ase.category.Category;
+import ase.category.CategoryRepository;
 import ase.session.Session;
+import ase.types.Status;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -8,6 +11,8 @@ import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.time.temporal.ChronoUnit;
 import java.time.temporal.TemporalUnit;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 @Service
 public class CreateActivitiesService {
@@ -32,6 +37,11 @@ public class CreateActivitiesService {
         if(activity.getName() == null){ throw new IllegalArgumentException("the Activity must have a name");}
         activityRepository.save(new Activity(activity.getName(), activity.getDueDate(), activity.getEstimation(), activity.getCategory()));
     }
+
+
+
+
+
 
 
 

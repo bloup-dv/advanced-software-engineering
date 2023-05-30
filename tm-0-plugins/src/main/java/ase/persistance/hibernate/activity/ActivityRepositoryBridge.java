@@ -4,6 +4,8 @@ package ase.persistance.hibernate.activity;
 import ase.activity.Activity;
 import ase.activity.ActivityRepository;
 
+import ase.category.Category;
+import ase.types.Status;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
@@ -41,6 +43,10 @@ public class ActivityRepositoryBridge implements ActivityRepository {
            return false;
        }
     }
+    @Override
+    public List<Activity> findAllByCategory(Category category) { return springDataActivityRepository.findAllByCategory(category);}
+    @Override
+    public List<Activity> findAllByStatus(Status status) { return springDataActivityRepository.findAllByStatus(status);}
 
     @Override
     public void delete(Activity activity) {

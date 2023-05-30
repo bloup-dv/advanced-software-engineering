@@ -19,18 +19,18 @@ public class SessionService {
         this.sessionRepository = sessionRepository;
     }
 
-    /*public createActivity(Activity activity) throws IllegalArgumentException {
-        if()
-    }*/
     public void startSession(Activity activity) throws IllegalArgumentException{
         LocalDateTime startTime = LocalDateTime.now();
+        if(activity== null){
+            throw new IllegalArgumentException("The Activity is invalid");
+        }
         if(!activityRepository.existsById(activity.getId())){
             throw new IllegalArgumentException("The Activity does not exist");
         }
         if(activity.getDueDate().isBefore(startTime)){
             throw new IllegalArgumentException("this Activity is already overdue");
         }
-        if(activity.getStatus().getStatus().equals(Status.DONE)){
+        if(activity.getStatus().equals(Status.DONE)){
             throw new IllegalArgumentException("this Activity has already been completed.");
         }
         activity.setStatus(Status.IN_PROGRESS);
@@ -57,7 +57,7 @@ public class SessionService {
         if(!activityRepository.existsById(activity.getId())){
             throw new IllegalArgumentException("Activity does not exist");
         }
-        if (activity.getStatus().getStatus().equals(Status.TODO)){
+        if (activity.getStatus().equals(Status.TODO)){
             return new ArrayList<Session>();
         }
         else {

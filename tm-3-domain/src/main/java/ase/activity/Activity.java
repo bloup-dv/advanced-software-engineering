@@ -3,6 +3,7 @@ package ase.activity;
 import ase.session.Session;
 import ase.category.Category;
 import ase.types.Estimation;
+import ase.types.Status;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 import java.util.ArrayList;
@@ -26,6 +27,8 @@ public class Activity {
     @ManyToOne
     @JoinColumn(name = "category_id")
     private Category category;
+    @Column(name = "status")
+    private Status status;
     @Transient
     @OneToMany(cascade = CascadeType.PERSIST, mappedBy = "activity")
     private List<Session> sessionList;
@@ -38,15 +41,17 @@ public class Activity {
         this.dueDate = dueDate;
         this.estimation = estimation;
         this.category = category;
+        this.status = Status.TODO;
         this.sessionList = new ArrayList<Session>();
     }
 
-    public Activity(Long id, String name, LocalDateTime dueDate, Estimation estimation, Category category) {
+    public Activity(Long id, String name, LocalDateTime dueDate, Estimation estimation, Category category, Status status) {
         this.id = id;
         this.name = name;
         this.dueDate = dueDate;
         this.estimation = estimation;
         this.category = category;
+        this.status = status;
         this.sessionList = new ArrayList<Session>();
     }
 
@@ -84,6 +89,13 @@ public class Activity {
 
     public void setCategory(Category category) {
         this.category = category;
+    }
+    public Status getStatus(){
+        return this.status;
+    }
+
+    public void setStatus(Status status){
+        this.status = status;
     }
 
     public List<Session> getSessionList() {

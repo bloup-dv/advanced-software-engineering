@@ -2,6 +2,7 @@ package ase.activity;
 
 import ase.category.CategoryDTO;
 import ase.estimation.EstimationDTO;
+import ase.types.Status;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
@@ -20,7 +21,8 @@ import java.time.LocalDateTime;
         "name",
         "due_date",
         "estimation",
-        "category"
+        "category",
+        "status"
 })
 @Generated("jsonschema2pojo")
 public class ActivityDTO {
@@ -34,13 +36,16 @@ public class ActivityDTO {
     private EstimationDTO estimationDTO;
     @JsonProperty("category")
     private CategoryDTO categoryDTO;
+    @JsonProperty("status")
+    private Status status;
 
-    public ActivityDTO(Long id, String name, LocalDateTime dueDate, EstimationDTO estimationDTO, CategoryDTO categoryDTO){
+    public ActivityDTO(Long id, String name, LocalDateTime dueDate, EstimationDTO estimationDTO, CategoryDTO categoryDTO, Status status){
         this.id = id;
         this.name = name;
         this.dueDate = dueDate;
         this.estimationDTO = estimationDTO;
         this.categoryDTO = categoryDTO;
+        this.status = status;
     }
     @JsonProperty("id")
     public Long getId() {
@@ -61,5 +66,10 @@ public class ActivityDTO {
     @JsonProperty("category")
     public CategoryDTO getCategoryDTO(){
         return categoryDTO;
+    }
+
+    @JsonProperty("status")
+    public Status getStatus() {
+        return status;
     }
 }

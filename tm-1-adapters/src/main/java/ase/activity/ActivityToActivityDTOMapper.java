@@ -24,6 +24,7 @@ public class ActivityToActivityDTOMapper implements Function<Activity, ActivityD
                 activity.getName(),
                 activity.getDueDate(),
                 estimationToEstimationDTOMapper.apply(activity.getEstimation()),
-                categoryToCategoryDTOMapper.apply(activity.getCategory()));
+                categoryToCategoryDTOMapper.apply(activity.getCategory()),
+                activity.getStatus());
     }
 }

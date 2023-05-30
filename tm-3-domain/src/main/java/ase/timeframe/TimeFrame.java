@@ -17,7 +17,7 @@ public class TimeFrame {
     @Column(name = "end")
     private LocalTime end;
     @Transient
-    @OneToMany(cascade = CascadeType.PERSIST, mappedBy = "timeFrame")
+    @OneToMany(cascade = CascadeType.PERSIST, mappedBy = "time_Frame")
     private List<Category> categoryList;
 
 

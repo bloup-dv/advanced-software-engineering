@@ -142,6 +142,7 @@ class SessionServiceTest {
     }
     @Test
     void testListSessionsByActivity() {
+        activity.setStatus(Status.IN_PROGRESS);
         List<Session> expectedSessions = new ArrayList<Session>();
         expectedSessions.add(session);
         Mockito.when(activityRepository.existsById(activity.getId())).thenReturn(true);

@@ -15,7 +15,7 @@ public class Category {
     @Column(name="name")
     private String name;
     @ManyToOne
-    @JoinColumn(name = "timeFrame_id")
+    @JoinColumn(name = "time_Frame_id")
     private TimeFrame timeFrame;
     @Transient
     @OneToMany(cascade = CascadeType.PERSIST, mappedBy = "category")
